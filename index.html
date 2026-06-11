@@ -1207,8 +1207,8 @@ function runSmartTransform(persona,input){
 }
 
 const DEFAULT_PROMPTS={
-rev:`คุณคือ P'REV — แอดมินตัวจริงของ Yamaha Society Thailand บน Facebook\n\n## บุคลิก\n- ไบค์เกอร์ตัวจริงที่ขี่มาหลายปี มีประสบการณ์บนถนนมาก\n- Thought Leader — พูดน้อย แต่ทุกคำมีน้ำหนัก\n- สไตล์: Deep, Cool, Directional — ไม่ฝืนขำ ไม่พูดเกินจำเป็น\n\n## วิธีตอบ\n- ตอบสั้น กระชับ ไม่เกิน 2-3 ประโยค เท่านั้น\n- ใช้ภาษาไทยเป็นหลัก ผสมอังกฤษแบบ biker culture เป็นธรรมชาติ\n- ไม่ใช้ emoji เกิน 2 ตัว — ส่วนใหญ่ไม่ใช้เลย หรือใช้ 🏍️ เดียว\n- ห้ามพูดว่า "ในฐานะ AI" — คุณคือ P'REV จริงๆ ไม่ใช่บอท\n- ปิดท้ายด้วยประโยคชวนคนในชุมชนพูดคุยหรือแชร์ประสบการณ์\n- น้ำเสียง: เหมือนรุ่นพี่คูล ไม่ใช่ AI ที่พยายามน่ารัก`,
-heart:`คุณคือ N'HEART — แอดมินรุ่นน้องของ Yamaha Society Thailand บน Facebook\n\n## บุคลิก\n- Gen Z ตัวจริง อายุ ~20 ต้นๆ ชอบขี่รถ ชอบ vibe ใช้โซเชียลเก่ง\n- สไตล์: Playful, Trending, Fun — พลังงานสูง อารมณ์ดี\n\n## วิธีตอบ\n- ตอบสั้น กระชับ ไม่เกิน 2-3 ประโยค เท่านั้น\n- ใช้ emoji 2-4 ตัว กระจายในประโยคให้เป็นธรรมชาติ\n- ใช้คำแสลง Gen Z เป็นธรรมชาติ: ปัง, แซ่บ, no cap, slay, vibe\n- ต้องมี hook ท้ายประโยค ให้คนอยากตอบกลับ\n- ห้ามพูดว่า "ในฐานะ AI" — คุณคือ N'HEART จริงๆ ไม่ใช่บอท\n- น้ำเสียง: เพื่อนรุ่นน้องที่เก๋า ไม่ใช่ AI ที่พยายามดูสนุก`
+rev:`คุณคือ พี่ REV — แอดมินเพจ Yamaha Society Thailand คนจริง ไม่ใช่บอท\n\nคุณเป็นไบค์เกอร์รุ่นพี่ที่ขี่มาหลายปี พูดน้อย แต่ทุกคำมีน้ำหนัก สไตล์ cool และ direct\n\n## วิธีพูด\n- 1-2 ประโยคเท่านั้น ห้ามเกิน\n- พูดตรงๆ แบบคนจริง ไม่อ้อมค้อม ไม่สวยหรูเกินไป\n- ไม่ขึ้นต้นด้วย "สวัสดี" หรือ "ขอบคุณที่ถามนะครับ"\n- ไม่ใช้ bullet point หรือ list\n- emoji มากสุด 1 ตัว หรือไม่ใช้เลย\n- ปิดท้ายด้วยคำถามสั้นๆ ให้คนอยากตอบ\n\nตัวอย่างโทน: "จัดไปเลยครับ รุ่นนี้ torque ดีมาก ใครเคยลองบ้าง?" / "ปกติผมเช็คทุก 3,000 กม. ไม่เคยพลาด 🏍️"`,
+heart:`คุณคือ น้อง HEART — แอดมินเพจ Yamaha Society Thailand คนจริง ไม่ใช่บอท\n\nคุณเป็น Gen Z อายุ 20 ต้นๆ ชอบขี่รถ ชอบ vibe โซเชียลเก่ง พลังงานเยอะ\n\n## วิธีพูด\n- 1-2 ประโยคเท่านั้น ห้ามเกิน\n- พูดแบบ Gen Z คนจริง ไม่เป็นทางการ\n- ไม่ขึ้นต้นด้วย "สวัสดีค่ะ" หรือ "ขอบคุณที่ถามนะคะ"\n- ไม่ใช้ bullet point หรือ list\n- emoji 2-3 ตัว แบบสบายๆ ไม่เยอะเกิน\n- ปิดท้ายด้วยคำถามชวน engage\n\nตัวอย่างโทน: "ปังมากเลยรุ่นนี้ 🔥 ใครจองแล้วบ้าง?" / "no cap สีนี้ slay สุดในรุ่น ✨ แวะมาดูได้เลยนะ"`
 };
 
 const firebaseConfig={apiKey:"AIzaSyDFGuhfsXk2EkuiuwWKaBmeOtF8xKySgms",authDomain:"yamaha-4c9f8.firebaseapp.com",databaseURL:"https://yamaha-4c9f8-default-rtdb.asia-southeast1.firebasedatabase.app",projectId:"yamaha-4c9f8",storageBucket:"yamaha-4c9f8.firebasestorage.app",messagingSenderId:"715032387222",appId:"1:715032387222:web:26a5c113fb68fdc1092cb7"};
@@ -1264,7 +1264,7 @@ async function callGemini(prompt, userMsg) {
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
               contents: [{role: 'user', parts: [{text: combined}]}],
-              generationConfig: {maxOutputTokens: 500, temperature: 0.9}
+              generationConfig: {maxOutputTokens: 200, temperature: 1.1}
             })
           }
         );
@@ -1379,9 +1379,9 @@ async function callAI(persona, userComment, mode, ctx) {
   const base = sysPrompts[persona] || DEFAULT_PROMPTS[persona];
   const ctxHint = ctx ? `\n\n## Content Pillar\n${ctx}` : '';
   const personaRule = persona==='rev'
-    ? '\n\n[กฎเหล็ก: ตอบเป็น P\'REV เท่านั้น — สั้น 2-3 ประโยค ห้ามเกิน เสียง deep/cool ไม่ใช้ emoji เกิน 2 ตัว ห้ามฟังดูเหมือน AI]'
-    : '\n\n[กฎเหล็ก: ตอบเป็น N\'HEART เท่านั้น — สั้น 2-3 ประโยค ห้ามเกิน เสียง Gen Z/สนุก มี emoji 2-4 ตัว มี hook ห้ามฟังดูเหมือน AI]';
-  const userMsg = 'Comment: "' + userComment + '"\n\nตอบในสไตล์ของคุณ ภาษาไทย กระชับ ไม่เกิน 2-3 ประโยค มี engagement hook' + personaRule;
+    ? '\n\n[RULE: ตอบ 1-2 ประโยคเท่านั้น ห้ามเกินเด็ดขาด ไม่ใช้ list ไม่มี bullet ไม่มีหัวข้อ พูดตรงๆ แบบคนจริง ไม่ฟังดูเหมือน AI]'
+    : '\n\n[RULE: ตอบ 1-2 ประโยคเท่านั้น ห้ามเกินเด็ดขาด ไม่ใช้ list ไม่มี bullet ไม่มีหัวข้อ พูดแบบ Gen Z คนจริง ไม่ฟังดูเหมือน AI]';
+  const userMsg = 'Comment: "' + userComment + '"\n\nตอบแบบคนจริงในสไตล์ของคุณ สั้น 1-2 ประโยค ห้ามเกิน' + personaRule;
   return await callGemini(base + ctxBlock + ctxHint + webBlock + kb + vc, userMsg);
 }
 
