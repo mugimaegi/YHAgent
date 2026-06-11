@@ -1316,12 +1316,14 @@ function isBikeInfoQuestion(text) {
 async function searchWebForBike(query) {
   const key = localStorage.getItem('y_api_key_gemini') || '';
   if (!key) return '';
-  const groundingModels = ['gemini-2.0-flash', 'gemini-1.5-flash-latest', 'gemini-2.5-flash', 'gemini-1.5-pro-latest'];
+  // Use google_search_retrieval grounding — model must support it (2.0-flash, 1.5-flash)
+  const groundingModels = ['gemini-2.0-flash', 'gemini-1.5-flash-latest'];
   for (const model of groundingModels) {
     try {
       const body = {
-        contents: [{role: 'user', parts: [{text: 'สรุปข้อมูลรถมอเตอร์ไซค์ที่เกี่ยวกับ: "' + query + '" จาก Yamaha Thailand ให้สั้น กระชับ เฉพาะข้อเท็จจริงที่รู้ ไม่เกิน 3 bullet points'}]}],
-        generationConfig: {maxOutputTokens: 300, temperature: 0.1}
+        contents: [{role: 'user', parts: [{text: 'ค้นหาและสรุปข้อมูลล่าสุดเกี่ยวกับ: "' + query + '" จาก Yamaha Thailand หรือแหล่งข้อมูลรถมอเตอร์ไซค์ไทย ให้สั้น กระชับ เฉพาะข้อเท็จจริง ไม่เกิน 3 bullet points ภาษาไทย'}]},
+        tools: [{"googleSearch": {}}],
+        generationConfig: {maxOutputTokens: 400, temperature: 0.1}
       };
       const resp = await fetch(
         'https://generativelanguage.googleapis.com/v1beta/models/' + model + ':generateContent?key=' + key,
