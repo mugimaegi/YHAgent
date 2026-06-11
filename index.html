@@ -856,7 +856,7 @@ body{
 
 <div class="hdr">
   <div class="hdr-l">
-    <img class="hdr-logo" src="images/logoyamaha.png" alt="Yamaha" onerror="this.style.display='none';">
+    <img class="hdr-logo" src="images/logo.png" alt="Yamaha" onerror="this.style.display='none';">
     <div class="hdr-div"></div>
     <div>
       <div class="hdr-title">Dual Virtual Influencer</div>
@@ -883,7 +883,7 @@ body{
             <svg viewBox="0 0 20 20" fill="currentColor" width="12" height="12"><path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/></svg>
           </div>
           <div class="psel-avatar-wrap">
-            <img class="psel-avatar" src="images/prev.jpg" alt="P'REV">
+            <img class="psel-avatar" src="images/nheart.jpg" alt="P'REV">
           </div>
           <div class="psel-info">
             <div class="psel-name">P'REV</div>
@@ -891,7 +891,7 @@ body{
           </div>
         </button>
         <button class="psel-btn both active-psel" id="cbtn-both" data-char="both">
-          <div class="psel-both-icon"><img src="images/logo.png" style="width:44px;height:44px;object-fit:contain;display:block;filter:drop-shadow(0 0 6px rgba(230,0,38,0.4));"></div>
+          <div class="psel-both-icon"><img src="images/logoyamaha.png" style="width:44px;height:44px;object-fit:contain;display:block;filter:drop-shadow(0 0 6px rgba(230,0,38,0.4));"></div>
           <div class="psel-info" style="padding-top:6px;">
             <div class="psel-name">ทั้งคู่</div>
             <div class="psel-role">พร้อมกัน</div>
@@ -902,7 +902,7 @@ body{
             <svg viewBox="0 0 20 20" fill="currentColor" width="12" height="12"><path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/></svg>
           </div>
           <div class="psel-avatar-wrap">
-            <img class="psel-avatar" src="images/nheart.jpg" alt="N'HEART">
+            <img class="psel-avatar" src="images/prev.jpg" alt="N'HEART">
           </div>
           <div class="psel-info">
             <div class="psel-name">N'HEART</div>
@@ -1212,7 +1212,7 @@ heart:`คุณคือ น้อง HEART — แอดมินเพจ Yam
 };
 
 const firebaseConfig={apiKey:"AIzaSyDFGuhfsXk2EkuiuwWKaBmeOtF8xKySgms",authDomain:"yamaha-4c9f8.firebaseapp.com",databaseURL:"https://yamaha-4c9f8-default-rtdb.asia-southeast1.firebasedatabase.app",projectId:"yamaha-4c9f8",storageBucket:"yamaha-4c9f8.firebasestorage.app",messagingSenderId:"715032387222",appId:"1:715032387222:web:26a5c113fb68fdc1092cb7"};
-const IMG={rev:'images/prev.jpg',heart:'images/nheart.jpg'};
+const IMG={rev:'images/nheart.jpg',heart:'images/prev.jpg'};
 let db=null,fbReady=false;
 async function initFirebase(){try{const app=firebase.initializeApp(firebaseConfig);db=app.database();await db.ref('yamaha/_ping').set({ts:Date.now()});await db.ref('yamaha/_ping').remove();fbReady=true;setBadge('online');showToast('🔥 Firebase เชื่อมต่อแล้ว!');setupListeners();await pullFromFirebase();}catch(e){fbReady=false;setBadge('offline');showToast('⚠️ Offline Mode','warn');}}
 function setBadge(s){const b=document.getElementById('conn-badge'),t=document.getElementById('conn-text'),d=b.querySelector('.conn-dot');if(s==='online'){b.className='conn-badge online';d.className='conn-dot';t.textContent='Online';}else if(s==='connecting'){b.className='conn-badge connecting';d.className='conn-dot blink';t.textContent='กำลังเชื่อมต่อ';}else{b.className='conn-badge offline';d.className='conn-dot';t.textContent='Offline';}}
@@ -1409,7 +1409,7 @@ async function typeText(el,text,spd){el.innerHTML='';const cur=document.createEl
 
 function makeCard(persona,input,isT){
   const id=++cardCount,isRev=persona==='rev';const card=document.createElement('div');card.className=`rcard ${persona}`;
-  const fb=isRev?'🏍️':'❤️';const avatarHtml=`<img src="${IMG[persona]}" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:50%;" onerror="this.style.display='none';this.parentNode.innerHTML+='<span style=\\'font-size:20px;\\'>${fb}</span>'">`;
+  const fb=isRev?'🏍️':'🔥';const avatarHtml=`<img src="${IMG[persona]}" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:50%;" onerror="this.style.display='none';this.parentNode.innerHTML+='<span style=\\'font-size:20px;\\'>${fb}</span>'">`;
   const topBadge=isSmartMode()?`<div class="smart-badge">⚡ Smart Gen</div>`:(isT?`<div class="transform-badge">✍️ แปลงสไตล์</div>`:'');
   const kbTag=customItems.length?`<span class="src-tag kb">📎 Source</span>`:'';
   const srcTag=isSmartMode()?`<span class="src-tag smart">⚡ Smart</span><span class="src-tag vocab">📝 Vocab</span>${kbTag}`:`<span class="src-tag ai">✨ Gemini Auto</span>${kbTag}<span class="src-tag vocab">📝 Vocab</span>`;
@@ -1458,7 +1458,7 @@ async function runTool(){
   if(window.innerWidth<=720)document.getElementById('output-area').scrollIntoView({behavior:'smooth',block:'start'});
 }
 
-async function exportToPDF(){if(!currentOutput.length){showToast('ยังไม่มีผลลัพธ์','error');return;}const btn=document.getElementById('pdf-btn');btn.disabled=true;btn.textContent='⏳...';const isT=toolMode==='transform',input=currentOutput[0]?.inputText||'',now=new Date().toLocaleString('th-TH');const cap=document.getElementById('pdf-capture');cap.style.display='block';cap.innerHTML=`<div class="pdf-hdr"><div style="background:#fff;padding:4px 8px;border-radius:4px;"><img class="pdf-logo-img" src="images/logoyamaha.png" alt="Yamaha"></div><div class="pdf-date">${now}</div></div><div class="pdf-comment-box"><div class="pdf-comment-label">${isT?'✍️':'💬'} ${isT?'ข้อความที่แปลง':'Comment'}</div><div class="pdf-comment-text">${input}</div></div>${currentOutput.map(o=>`<div class="pdf-card ${o.persona}"><div class="pdf-card-hdr"><div class="pdf-card-avatar ${o.persona}"><img src="${IMG[o.persona]}" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></div><div><div class="pdf-card-name ${o.persona}">${o.persona==='rev'?"P'REV":"N'HEART"}</div><div class="pdf-card-tag">${o.persona==='rev'?'The Biker':'The Vibe'}</div></div></div><div class="pdf-card-body"><div class="pdf-card-text">${o.reply}</div></div></div>`).join('')}<div class="pdf-footer">Dual Virtual Influencer · Yamaha AI Agent · ${now}</div>`;
+async function exportToPDF(){if(!currentOutput.length){showToast('ยังไม่มีผลลัพธ์','error');return;}const btn=document.getElementById('pdf-btn');btn.disabled=true;btn.textContent='⏳...';const isT=toolMode==='transform',input=currentOutput[0]?.inputText||'',now=new Date().toLocaleString('th-TH');const cap=document.getElementById('pdf-capture');cap.style.display='block';cap.innerHTML=`<div class="pdf-hdr"><div style="background:#fff;padding:4px 8px;border-radius:4px;"><img class="pdf-logo-img" src="images/logo.png" alt="Yamaha"></div><div class="pdf-date">${now}</div></div><div class="pdf-comment-box"><div class="pdf-comment-label">${isT?'✍️':'💬'} ${isT?'ข้อความที่แปลง':'Comment'}</div><div class="pdf-comment-text">${input}</div></div>${currentOutput.map(o=>`<div class="pdf-card ${o.persona}"><div class="pdf-card-hdr"><div class="pdf-card-avatar ${o.persona}"><img src="${IMG[o.persona]}" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></div><div><div class="pdf-card-name ${o.persona}">${o.persona==='rev'?"P'REV":"N'HEART"}</div><div class="pdf-card-tag">${o.persona==='rev'?'The Biker • พี่ REV':'The Vibe • น้อง HEART'}</div></div></div><div class="pdf-card-body"><div class="pdf-card-text">${o.reply}</div></div></div>`).join('')}<div class="pdf-footer">Dual Virtual Influencer · Yamaha AI Agent · ${now}</div>`;
 try{const canvas=await html2canvas(cap,{scale:2,backgroundColor:'#111',useCORS:true,logging:false});cap.style.display='none';const{jsPDF}=window.jspdf;const pdf=new jsPDF({orientation:'portrait',unit:'mm',format:'a4'});const pw=pdf.internal.pageSize.getWidth(),ph=pdf.internal.pageSize.getHeight();const imgH=(canvas.height*pw)/canvas.width;const img=canvas.toDataURL('image/png');let pos=0,rem=imgH;pdf.addImage(img,'PNG',0,pos,pw,imgH);rem-=ph;while(rem>0){pos-=ph;pdf.addPage();pdf.addImage(img,'PNG',0,pos,pw,imgH);rem-=ph;}pdf.save(`yamaha-${Date.now()}.pdf`);showToast('📄 Export PDF สำเร็จ!');}catch(e){cap.style.display='none';showToast('❌ Export ไม่สำเร็จ','error');}btn.disabled=false;btn.textContent='📄 Export PDF';}
 
 function getActiveTemplates(){const isT=toolMode==='transform';const defaults=isT?DEFAULT_TRANSFORM_TEMPLATES:DEFAULT_REPLY_TEMPLATES;const customs=isT?customTransformTemplates:customReplyTemplates;return{defaults,customs};}
