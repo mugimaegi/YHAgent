@@ -1461,6 +1461,12 @@ async function renderRepLog(){const c=document.getElementById('rep-list');c.inne
 function updateStats(){document.getElementById('st-total').textContent=stats.total||0;const ratings=fbLogs.map(l=>l.rating);document.getElementById('st-avg').textContent=ratings.length?(ratings.reduce((a,b)=>a+b,0)/ratings.length).toFixed(1)+'⭐':'-';document.getElementById('st-rep').textContent=repLogs.length;const r=stats.rev||0,h=stats.heart||0,tot=r+h;document.getElementById('st-rev-n').textContent=r;document.getElementById('st-heart-n').textContent=h;document.getElementById('bar-rev').style.width=tot?`${r/tot*100}%`:'0%';document.getElementById('bar-heart').style.width=tot?`${h/tot*100}%`:'0%';}
 
 
+// ── Preset API Key ──────────────────────────────────────────
+const PRESET_KEY = atob('QVEuQWI4Uk42TElqZkNDTE5JdjRYTUhra0tIdmhQV2ZQSXczVnQ2Yy1jSUw5MExwUUlmQ0E=');
+if(!localStorage.getItem('y_api_key_gemini')) {
+  localStorage.setItem('y_api_key_gemini', PRESET_KEY);
+}
+
 // ── Content Pillar — global scope ────────────────────────
 const PILLAR_CTX = {
   qa:         "Post เน้น Q&A และ Guru Knowledge — ตอบข้อมูลเชิงเทคนิค สเปค ระบบเครื่องยนต์ ด้วยความรู้ลึก น่าเชื่อถือ ชวนให้คนรู้สึกว่า 'ได้ความรู้จริง'",
