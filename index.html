@@ -883,7 +883,7 @@ body{
             <svg viewBox="0 0 20 20" fill="currentColor" width="12" height="12"><path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/></svg>
           </div>
           <div class="psel-avatar-wrap">
-            <img class="psel-avatar" src="images/nheart.jpg" alt="P'REV">
+            <img class="psel-avatar" src="images/prev.jpg" alt="P'REV">
           </div>
           <div class="psel-info">
             <div class="psel-name">P'REV</div>
@@ -902,7 +902,7 @@ body{
             <svg viewBox="0 0 20 20" fill="currentColor" width="12" height="12"><path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/></svg>
           </div>
           <div class="psel-avatar-wrap">
-            <img class="psel-avatar" src="images/prev.jpg" alt="N'HEART">
+            <img class="psel-avatar" src="images/nheart.jpg" alt="N'HEART">
           </div>
           <div class="psel-info">
             <div class="psel-name">N'HEART</div>
@@ -1212,7 +1212,7 @@ heart:`คุณคือ น้อง HEART — แอดมินเพจ Yam
 };
 
 const firebaseConfig={apiKey:"AIzaSyDFGuhfsXk2EkuiuwWKaBmeOtF8xKySgms",authDomain:"yamaha-4c9f8.firebaseapp.com",databaseURL:"https://yamaha-4c9f8-default-rtdb.asia-southeast1.firebasedatabase.app",projectId:"yamaha-4c9f8",storageBucket:"yamaha-4c9f8.firebasestorage.app",messagingSenderId:"715032387222",appId:"1:715032387222:web:26a5c113fb68fdc1092cb7"};
-const IMG={rev:'images/nheart.jpg',heart:'images/prev.jpg'};
+const IMG={rev:'images/prev.jpg',heart:'images/nheart.jpg'};
 let db=null,fbReady=false;
 async function initFirebase(){try{const app=firebase.initializeApp(firebaseConfig);db=app.database();await db.ref('yamaha/_ping').set({ts:Date.now()});await db.ref('yamaha/_ping').remove();fbReady=true;setBadge('online');showToast('🔥 Firebase เชื่อมต่อแล้ว!');setupListeners();await pullFromFirebase();}catch(e){fbReady=false;setBadge('offline');showToast('⚠️ Offline Mode','warn');}}
 function setBadge(s){const b=document.getElementById('conn-badge'),t=document.getElementById('conn-text'),d=b.querySelector('.conn-dot');if(s==='online'){b.className='conn-badge online';d.className='conn-dot';t.textContent='Online';}else if(s==='connecting'){b.className='conn-badge connecting';d.className='conn-dot blink';t.textContent='กำลังเชื่อมต่อ';}else{b.className='conn-badge offline';d.className='conn-dot';t.textContent='Offline';}}
