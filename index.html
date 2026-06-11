@@ -987,7 +987,7 @@ body{
         <span class="char-count" id="char-count">0</span>
       </div>
       <div class="smart-hint" id="smart-hint">
-        ⚡ <strong>Smart Gen</strong> — ไม่ต้อง API Key &nbsp;<span id="smart-kb-info" style="opacity:.75;"></span>
+        ⚡ <strong>Smart Gen</strong> — ตอบด้วย Template + Vocab &nbsp;<span id="smart-kb-info" style="opacity:.75;"></span>
       </div>
     </div>
 
@@ -1039,7 +1039,7 @@ body{
 
   <div class="atab-c show" id="ac-smart">
     <h2 class="admin-h">⚡ Smart Generator</h2>
-    <p class="admin-sub">ระบบตอบอัตโนมัติ ไม่ใช้ AI — Keyword + KB + Vocab</p>
+    <p class="admin-sub">ตอบด้วย Template + Vocab + KB — ไม่ต้องใช้ API Key</p>
 
 
 
@@ -1302,7 +1302,7 @@ async function callGemini(prompt, userMsg) {
     }
   }
   // All models tried and failed
-  throw new Error(`Gemini ทุก model ไม่ว่าง (ลองแล้ว ${tried} ครั้ง)\n\n💡 สลับไปใช้ ⚡ Smart Gen ได้เลย — ทำงาน offline ไม่ต้อง API Key!`);
+  throw new Error(`Gemini ทุก model ไม่ว่าง (ลองแล้ว ${tried} ครั้ง)\n\n💡 สลับไปใช้ ⚡ Smart Gen ได้เลย — ตอบด้วย Template + Vocab ไม่ต้อง API Key!`);
 }
 
 
