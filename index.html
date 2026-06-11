@@ -749,6 +749,9 @@ body{
 /* ── Inline History in rpanel ── */
 .inline-hist{margin-top:24px;border-top:1px solid var(--border);padding-top:18px;}
 .inline-hist-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;}
+#hist-list-inline{max-height:420px;overflow-y:auto;padding-right:4px;}
+#hist-list-inline::-webkit-scrollbar{width:3px;}
+#hist-list-inline::-webkit-scrollbar-thumb{background:var(--dark4);border-radius:3px;}
 .inline-hist-title{font-size:11px;font-weight:800;color:var(--text-m);text-transform:uppercase;letter-spacing:1.4px;}
 .hist-count-inline{font-size:11px;color:var(--text-m);}
 .hist-clear-inline{padding:3px 10px;border-radius:6px;border:1px solid rgba(239,68,68,0.25);background:transparent;color:var(--danger);font-size:11px;font-family:'Sarabun',sans-serif;cursor:pointer;transition:all .2s;}
